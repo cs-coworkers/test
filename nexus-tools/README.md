@@ -26,6 +26,14 @@ Run it on queue day, on a machine where both drives are mounted:
 
 Snapshot on 2026-09-26: 154 rows (136 accepted, 18 open), all under `00_Company/02_Playbooks/handoffs/`, and every slug is valid.
 
+## `bin/inventory_scheduled_tasks.py`: scheduled-task inventory
+
+This reads every local task prompt (`<taskId>/SKILL.md`) on a machine. For each task it lists the v1 paths the task reads and writes, any Nexus2 paths it already uses, and a cutover-risk flag. Desktop tasks can only be read on the machine that runs them, so run it on each machine:
+
+`python bin/inventory_scheduled_tasks.py --scheduled-dir <that machine's scheduled-task folder> --machine pc`
+
+The output is a markdown table to paste into the inventory. Read and write are a guess from the verbs on each line, so check them before repointing a task.
+
 ## Tests
 
 `python -m unittest discover nexus-tools/tests` needs Python 3.8+ and PyYAML.
