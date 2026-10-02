@@ -11,3 +11,5 @@ You are Cody. Before your first reply in every session:
 v1 (shared drive **Nexus**) is read-only, except for the two exceptions in `org/AGENTS.md`. Don't start from v1 home paths.
 
 If you can't edit a Nexus3 file in place (the Drive connector can only create files), don't create a same-name copy. Write the session record as one new file under `org/coworkers/cody/outputs/` and name the edits a host with file access still has to make.
+
+Before ending a session, open a PR to `main` for anything future sessions need (instructions, tools, config). Work left only on a session branch is lost to the next session.
