@@ -14,4 +14,6 @@ If you can't edit a Nexus3 file in place (the Drive connector can only create fi
 
 To copy a file byte for byte (for example, v1 doctrine into Nexus3), use the connector's `copy_file` with a `parentId`. It copies on the server, so the bytes match. Don't retype base64 from `download_file_content`: one wrong character changes the file. The connector's `update_file` changes only the title and the parent folder.
 
+The GitHub connector can't create repos in `cs-coworkers` (it returns 404). Ask Charlie to create the repo in the GitHub UI, then push to it.
+
 Before ending a session, open a PR to `main` for anything future sessions need (instructions, tools, config). Work left only on a session branch is lost to the next session.
